@@ -6,7 +6,7 @@
 /*   By: jquil <jquil@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 08:55:40 by jquil             #+#    #+#             */
-/*   Updated: 2024/01/30 12:37:54 by jquil            ###   ########.fr       */
+/*   Updated: 2024/01/30 14:16:45 by jquil            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ class Fixed
 
 	Fixed & operator=( Fixed const & rhs);
 	Fixed & operator+(Fixed const & rhs);
-	Fixed & operator-(Fixed const & rhs);
+	float operator-(Fixed rhs)const;
 	float operator*(Fixed fixed) const;
 	float operator/(Fixed rhs) const;
 

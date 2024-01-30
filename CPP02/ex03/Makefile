@@ -6,12 +6,14 @@
 #    By: jquil <jquil@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/10 11:58:31 by jquil             #+#    #+#              #
-#    Updated: 2024/01/30 13:26:58 by jquil            ###   ########.fr        #
+#    Updated: 2024/01/30 14:38:17 by jquil            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SRC		=	main.cpp		\
 			Fixed.cpp		\
+			Point.cpp		\
+			bsp.cpp			\
 
 NAME		=	BSP
 OBJS		=	$(SRC:.cpp=.o)

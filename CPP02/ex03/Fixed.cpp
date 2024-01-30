@@ -6,7 +6,7 @@
 /*   By: jquil <jquil@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 08:58:49 by jquil             #+#    #+#             */
-/*   Updated: 2024/01/30 13:24:46 by jquil            ###   ########.fr       */
+/*   Updated: 2024/01/30 14:17:54 by jquil            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,11 +49,10 @@ Fixed & Fixed::operator+(Fixed const & rhs)
 	return (*this);
 }
 
-Fixed & Fixed::operator-(Fixed const & rhs)
+float Fixed::operator-(Fixed rhs)const
 {
 	//std::cout << " - operator called" << std::endl;
-	setRawBits(this->getRawBits() - rhs.getRawBits());
-	return (*this);
+	return (this->toFloat() - rhs.toFloat());
 }
 
 float	Fixed::operator*(Fixed rhs) const
