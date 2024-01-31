@@ -6,7 +6,7 @@
 #    By: jquil <jquil@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/30 16:12:36 by jquil             #+#    #+#              #
-#    Updated: 2024/01/31 12:33:43 by jquil            ###   ########.fr        #
+#    Updated: 2024/01/31 14:45:50 by jquil            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,10 +14,9 @@ SRC		=	src/main.cpp		\
 			src/Animal.cpp		\
 			src/Dog.cpp			\
 			src/Cat.cpp			\
-			src/WrongCat.cpp	\
-			src/WrongAnimal.cpp	\
+			src/Brain.cpp		\
 
-NAME		=	MiaouWaouf
+NAME		=	Brain2
 OBJS		=	$(SRC:.cpp=.o)
 CC			=	g++
 FLAGS		=	-Werror -Wextra -Wall

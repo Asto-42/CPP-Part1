@@ -1,39 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jquil <jquil@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/30 17:34:56 by jquil             #+#    #+#             */
-/*   Updated: 2024/01/30 18:19:38 by jquil            ###   ########.fr       */
+/*   Created: 2024/01/31 14:08:05 by jquil             #+#    #+#             */
+/*   Updated: 2024/01/31 14:30:27 by jquil            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DOG_H
-# define DOG_H
+#ifndef BRAIN_H
+# define BRAIN_H
 
-#include "Animal.hpp"
-
-class Dog:public Animal
+class Brain
 {
 	private:
 
-	std::string type;
+	std::string ideas[100];
 
 	public:
 
-	Dog();
-	Dog(Dog & ref);
-	~Dog();
-
-	Dog & operator=(Dog const & rhs);
-
-	void makeSound() const;
-
-	std::string getType( void ) const;
-
+	Brain();
+	~Brain();
 };
-
 
 #endif

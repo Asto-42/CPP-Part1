@@ -1,34 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jquil <jquil@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/30 17:35:04 by jquil             #+#    #+#             */
-/*   Updated: 2024/01/30 18:07:35 by jquil            ###   ########.fr       */
+/*   Created: 2024/01/31 14:08:05 by jquil             #+#    #+#             */
+/*   Updated: 2024/01/31 14:30:27 by jquil            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CAT_H
-# define CAT_H
+#ifndef BRAIN_H
+# define BRAIN_H
 
-#include "Animal.hpp"
-
-class Cat:public Animal
+class Brain
 {
 	private:
-	std::string type;
+
+	std::string ideas[100];
 
 	public:
-	Cat();
-	~Cat();
-	Cat(Cat & ref);
-	Cat & operator=(Cat const & rhs);
-	void makeSound() const;
-	std::string getType( void ) const;
 
+	Brain();
+	~Brain();
 };
-
 
 #endif

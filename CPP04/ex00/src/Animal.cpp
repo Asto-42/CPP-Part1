@@ -6,28 +6,28 @@
 /*   By: jquil <jquil@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 17:34:09 by jquil             #+#    #+#             */
-/*   Updated: 2024/01/30 18:15:36 by jquil            ###   ########.fr       */
+/*   Updated: 2024/01/31 12:21:31 by jquil            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+#include "../include/Animal.hpp"
 
 
 Animal::Animal()
 {
-	std::cout << "\033[34mDefault Animal constructor called for "<< this->type <<  "\033[0m" << std::endl;
+	std::cout << "\033[34mDefault Animal constructor called\033[0m" << std::endl;
 	this->type = "animal";
 };
 
 Animal::~Animal()
 {
-	std::cout << "\033[34mDefault Animal destructor called for "<< this->type <<  "\033[0m" << std::endl;
+	std::cout << "\033[34mDefault Animal destructor called\033[0m" << std::endl;
 };
 
 Animal::Animal(Animal & ref)
 {
 	this->type = ref.type;
-	std::cout << "\033[34mCopy constructor called for "<< this->type <<  "\033[0m" << std::endl;
+	std::cout << "\033[34mCopy Animal constructor called for\033[0m" << std::endl;
 };
 
 Animal & Animal::operator=(Animal const & rhs)
