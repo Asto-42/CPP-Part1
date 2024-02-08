@@ -6,12 +6,12 @@
 /*   By: jquil <jquil@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 17:34:22 by jquil             #+#    #+#             */
-/*   Updated: 2024/01/31 16:12:55 by jquil            ###   ########.fr       */
+/*   Updated: 2024/02/07 11:53:25 by jquil            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef AMATERIA_H
-# define AMATERIA_H
+#ifndef AMATERIA_HPP
+# define AMATERIA_HPP
 
 #include <string>
 #include <iostream>
@@ -25,6 +25,37 @@
 #include <vector>
 #include <math.h>
 
+#include "Character.hpp"
+
+class ICharacter;
+class AMateria;
+
+class IMateriaSource
+{
+	public:
+	virtual ~IMateriaSource() {}
+	virtual void learnMateria(AMateria*) = 0;
+	virtual AMateria* createMateria(std::string const & type) = 0;
+};
+
+class MateriaSource:public IMateriaSource
+{
+	private :
+
+
+	public:
+
+	AMateria *inventory[4];
+	MateriaSource();
+	MateriaSource(MateriaSource const & ref);
+	MateriaSource & operator=(MateriaSource const & ref);
+
+
+	virtual ~MateriaSource();
+	virtual void learnMateria(AMateria* src);
+	virtual AMateria* createMateria(std::string const & type);
+};
+
 class AMateria
 {
 	protected :
@@ -34,10 +65,9 @@ class AMateria
 
 	AMateria();
 	AMateria(std::string const & type);
-	~AMateria();
+	virtual ~AMateria();
 
 	std::string const & getType() const;
-
 	virtual AMateria* clone() const = 0;
 	virtual void use(ICharacter & target);
 };
@@ -45,53 +75,28 @@ class AMateria
 class Ice:public AMateria
 {
 	private :
-	std::string type;
-	int	damage;
 
 	public :
 
 	Ice();
-	Ice::Ice(int amount);
 	~Ice();
+	virtual Ice* clone() const;
+	virtual void use(ICharacter & target);
 };
 
 class Cure:public AMateria
 {
 	private :
 	std::string type;
-	int amount;
 
 	public :
 
 	Cure();
-	Cure(int amount);
 	~Cure();
+	//std::string const & getType();
+	virtual Cure* clone() const;
+	virtual void use(ICharacter & target);
 };
 
-class ICharacter
-{
-	private :
-
-	std::string name;
-
-	public :
-
-	virtual ~ICharacter() {}
-	virtual std::string const & getName() const = 0;
-	virtual void equip(AMateria* m) = 0;
-	virtual void unequip(int idx) = 0;
-	virtual void use(int idx, ICharacter& target) = 0;
-};
-
-class IMateriaSource
-{
-	public:
-
-	virtual ~IMateriaSource() {}
-	virtual void learnMateria(AMateria*) = 0;
-	virtual AMateria* createMateria(std::string const & type) = 0;
-};
-
-// #include "../include/Brain.hpp"
 
 #endif

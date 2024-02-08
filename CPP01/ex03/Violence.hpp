@@ -6,12 +6,12 @@
 /*   By: jquil <jquil@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/23 15:09:57 by jquil             #+#    #+#             */
-/*   Updated: 2024/01/23 17:38:36 by jquil            ###   ########.fr       */
+/*   Updated: 2024/02/07 14:02:33 by jquil            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef VIOLENCE_H
-# define VIOLENCE_H
+#ifndef VIOLENCE_HPP
+# define VIOLENCE_HPP
 
 #include <string>
 #include <iostream>
@@ -31,31 +31,6 @@ class Weapon
 	std::string getType(void);
 	void setType(std::string newtype);
 };
-
-class HumanA
-{
-	private:
-
-	std::string name;
-
-	public:
-
-	Weapon *_Weapon;
-	HumanA(std::string name, Weapon *Weapon);
-	void attack(void);
-};
-
-class HumanB
-{
-	private:
-
-	std::string name;
-	Weapon *_Weapon;
-
-	public:
-
-	HumanB(std::string name);
-	void setWeapon(Weapon *Weapon);
-	void attack(void);
-};
+#include "HumanA.hpp"
+#include "HumanB.hpp"
 #endif

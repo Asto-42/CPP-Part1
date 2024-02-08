@@ -6,39 +6,42 @@
 #    By: jquil <jquil@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/10 11:58:31 by jquil             #+#    #+#              #
-#    Updated: 2024/01/30 13:26:58 by jquil            ###   ########.fr        #
+#    Updated: 2024/02/07 14:26:26 by jquil            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SRC		=	main.cpp		\
 			Fixed.cpp		\
 
-NAME		=	BSP
+NAME		=	Fixed
 OBJS		=	$(SRC:.cpp=.o)
-CC			=	g++
-FLAGS		=	-Werror -Wextra -Wall
 
-#------------------------------------------------------------------
+COMPILE		=	clang++
 
+FLAGS		=	-Wall -Wextra -Werror -std=c++98
+
+EXE_NAME	=	-o $(NAME)
+
+EXEC		=	$(NAME)
+
+# ------------------------------------- RULES ---------------------------------
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	@$(CC) $(OBJS) -o $(NAME)
+	$(COMPILE) $(FLAGS) $(OBJS) $(EXE_NAME)
 
-%.o: %.cpp
-	@$(CC) $(FLAGS) -c $< -o $@
+run: $(NAME)
+	./$(NAME)
 
 clean:
-	@$(RM) $(OBJS) $(DEPS)
+	rm -rf $(OBJS)
 
 fclean: clean
-	make -C fclean
-	@rm -rf $(NAME)
+	rm -rf $(EXEC)
 
-re:
-	@$(MAKE) fclean
-	@$(MAKE) all
+re:	fclean all
 
-#------------------------------------------------------------------
+.cpp.o:
+	${COMPILE} ${FLAGS} -c $< -o ${<:.cpp=.o}
 
-.PHONY: clean fclean re
+.PHONY:	all clean fclean re run

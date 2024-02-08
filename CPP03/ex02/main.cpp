@@ -6,7 +6,7 @@
 /*   By: jquil <jquil@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/23 18:36:30 by jquil             #+#    #+#             */
-/*   Updated: 2024/01/30 17:26:54 by jquil            ###   ########.fr       */
+/*   Updated: 2024/02/07 14:39:08 by jquil            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int main(void)
 	{
 		std::cout << "\033[34mConstructing\033[0m" << std::endl;
 		FragTrap e("Todo");
-		FragTrap f("Chadd");
+		FragTrap f("Yuji");
 
 		std::cout << "\033[34mTesting\033[0m" << std::endl;
 		e.highFivesGuys();

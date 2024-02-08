@@ -6,7 +6,7 @@
 /*   By: jquil <jquil@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/23 18:41:30 by jquil             #+#    #+#             */
-/*   Updated: 2024/01/24 08:49:03 by jquil            ###   ########.fr       */
+/*   Updated: 2024/02/07 14:10:30 by jquil            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ void Harl::error(void)
 void Harl::complain(std::string level)
 {
 	void(Harl::*ptr[])() = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
-	std::string arry[] = {"DEBYUG", "INFO", "WARNING", "ERROR"};
+	std::string arry[] = {"DEBUG", "INFO", "WARNING", "ERROR"};
 	for(int x = 0; x < 4 ; x++)
 	{
 		if(level == arry[x])

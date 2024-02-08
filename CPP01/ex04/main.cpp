@@ -6,7 +6,7 @@
 /*   By: jquil <jquil@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/23 17:41:08 by jquil             #+#    #+#             */
-/*   Updated: 2024/01/23 18:32:23 by jquil            ###   ########.fr       */
+/*   Updated: 2024/02/07 14:08:17 by jquil            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,16 @@
 
 int main(int argc, char **argv)
 {
-	std::fstream infile("file.in");
-	std::ofstream outfile("file.out");
-	std::string str;
-	std::string s2 = argv[3];
-	size_t x;
-
 	if (argc != 4)
 	{
 		std::cout << "Error" << std::endl;
 		return (1);
 	}
+	std::fstream infile("file.in");
+	std::ofstream outfile("file.out");
+	std::string str;
+	std::string s2 = argv[3];
+	size_t x;
 	infile.open(argv[1], std::ios::in);
 	if (!infile)
 		std::cout << "cant open file" << std::endl;

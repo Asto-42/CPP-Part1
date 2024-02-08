@@ -6,12 +6,12 @@
 /*   By: jquil <jquil@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/31 14:08:05 by jquil             #+#    #+#             */
-/*   Updated: 2024/01/31 14:30:27 by jquil            ###   ########.fr       */
+/*   Updated: 2024/02/07 14:45:21 by jquil            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef BRAIN_H
-# define BRAIN_H
+#ifndef BRAIN_HPP
+# define BRAIN_HPP
 
 class Brain
 {

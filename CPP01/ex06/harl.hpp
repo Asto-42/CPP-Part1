@@ -6,12 +6,12 @@
 /*   By: jquil <jquil@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/23 18:36:51 by jquil             #+#    #+#             */
-/*   Updated: 2024/01/23 19:17:40 by jquil            ###   ########.fr       */
+/*   Updated: 2024/02/07 14:23:07 by jquil            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HARL_H
-# define HARL_H
+#ifndef HARL_HPP
+# define HARL_HPP
 
 #include <string>
 #include <iostream>

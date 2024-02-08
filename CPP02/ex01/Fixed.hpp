@@ -6,12 +6,12 @@
 /*   By: jquil <jquil@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 08:55:40 by jquil             #+#    #+#             */
-/*   Updated: 2024/01/24 16:58:48 by jquil            ###   ########.fr       */
+/*   Updated: 2024/02/07 14:25:12 by jquil            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FIXED_H
-# define FIXED_H
+#ifndef FIXED_HPP
+# define FIXED_HPP
 
 #include <string>
 #include <iostream>

@@ -6,12 +6,12 @@
 /*   By: jquil <jquil@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/23 17:40:38 by jquil             #+#    #+#             */
-/*   Updated: 2024/01/23 18:37:10 by jquil            ###   ########.fr       */
+/*   Updated: 2024/02/07 14:03:36 by jquil            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SED_H
-# define SED_H
+#ifndef SED_HPP
+# define SED_HPP
 
 #include <string>
 #include <iostream>

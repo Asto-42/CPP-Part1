@@ -6,12 +6,12 @@
 /*   By: jquil <jquil@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 17:34:22 by jquil             #+#    #+#             */
-/*   Updated: 2024/01/31 13:55:01 by jquil            ###   ########.fr       */
+/*   Updated: 2024/02/07 14:43:25 by jquil            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMAL_H
-# define ANIMAL_H
+#ifndef ANIMAL_HPP
+# define ANIMAL_HPP
 
 #include <string>
 #include <iostream>
@@ -43,23 +43,7 @@ class Animal
 	virtual std::string getType(void) const;
 };
 
-class WrongAnimal
-{
-	protected :
-
-	std::string type;
-
-	public :
-
-	WrongAnimal();
-	WrongAnimal(WrongAnimal & ref);
-	~WrongAnimal();
-
-	WrongAnimal & operator=(WrongAnimal const & rhs);
-
-	void makeSound() const;
-	std::string getType(void) const;
-};
+#include "WrongAnimal.hpp"
 
 
 #endif

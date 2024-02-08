@@ -6,7 +6,7 @@
 #    By: jquil <jquil@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/10 11:58:31 by jquil             #+#    #+#              #
-#    Updated: 2024/01/23 13:53:01 by jquil            ###   ########.fr        #
+#    Updated: 2024/02/07 13:58:08 by jquil            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,30 +16,33 @@ SRC		=	main.cpp		\
 
 NAME		=	BRAINZ
 OBJS		=	$(SRC:.cpp=.o)
-CC			=	g++
-FLAGS		=	-Werror -Wextra -Wall
 
-#------------------------------------------------------------------
+COMPILE		=	clang++
 
+FLAGS		=	-Wall -Wextra -Werror -std=c++98
+
+EXE_NAME	=	-o $(NAME)
+
+EXEC		=	$(NAME)
+
+# ------------------------------------- RULES ---------------------------------
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	@$(CC) $(OBJS) -o $(NAME)
+	$(COMPILE) $(FLAGS) $(OBJS) $(EXE_NAME)
 
-%.o: %.cpp
-	@$(CC) $(FLAGS) -c $< -o $@
+run: $(NAME)
+	./$(NAME)
 
 clean:
-	@$(RM) $(OBJS) $(DEPS)
+	rm -rf $(OBJS)
 
 fclean: clean
-	make -C fclean
-	@rm -rf $(NAME)
+	rm -rf $(EXEC)
 
-re:
-	@$(MAKE) fclean
-	@$(MAKE) all
+re:	fclean all
 
-#------------------------------------------------------------------
+.cpp.o:
+	${COMPILE} ${FLAGS} -c $< -o ${<:.cpp=.o}
 
-.PHONY: clean fclean re
+.PHONY:	all clean fclean re run

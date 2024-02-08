@@ -6,12 +6,12 @@
 /*   By: jquil <jquil@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 17:14:16 by jquil             #+#    #+#             */
-/*   Updated: 2024/01/30 17:17:37 by jquil            ###   ########.fr       */
+/*   Updated: 2024/02/07 14:38:07 by jquil            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FRAGTRAP_H
-# define FRAGTRAP_H
+#ifndef FRAGTRAP_HPP
+# define FRAGTRAP_HPP
 
 #include "ClapTrap.hpp"
 

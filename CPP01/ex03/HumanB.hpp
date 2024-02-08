@@ -1,37 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
+/*   HumanB.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jquil <jquil@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/30 16:13:21 by jquil             #+#    #+#             */
-/*   Updated: 2024/02/07 14:38:13 by jquil            ###   ########.fr       */
+/*   Created: 2024/02/07 14:01:49 by jquil             #+#    #+#             */
+/*   Updated: 2024/02/07 14:02:07 by jquil            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef HUMANB_HPP
+# define HUMANB_HPP
 
-#ifndef SCAVTRAP_HPP
-# define SCAVTRAP_HPP
-
-#include "ClapTrap.hpp"
-
-class ScavTrap:public ClapTrap
+class HumanB
 {
 	private:
 
-	bool guard_mode;
+	std::string name;
+	Weapon *_Weapon;
 
 	public:
 
-	ScavTrap();
-	ScavTrap(std::string Name);
-	~ScavTrap();
-
-	void attack(const std::string & target);
-	void guardGate(void);
-
+	HumanB(std::string name);
+	void setWeapon(Weapon *Weapon);
+	void attack(void);
 };
-
-
 #endif

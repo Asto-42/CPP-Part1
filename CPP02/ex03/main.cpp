@@ -6,7 +6,7 @@
 /*   By: jquil <jquil@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/23 18:36:30 by jquil             #+#    #+#             */
-/*   Updated: 2024/01/30 14:53:32 by jquil            ###   ########.fr       */
+/*   Updated: 2024/02/07 14:29:08 by jquil            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,13 +34,13 @@ int main(void)
 	std::cout << "Enter x.a" << std::endl;
 	std::getline(std::cin, str);
 	if (std::cin.eof())
-		return false;
+		return 0;
 	a_x = atoi(str.c_str());
 	//y
 	std::cout << "Enter y.a" << std::endl;
 	std::getline(std::cin, str);
 	if (std::cin.eof())
-		return false;
+		return 0;
 	a_y = atoi(str.c_str());
 	Point a(a_x, a_y);
 	std::cout << "Point A is setup\nA(" << a.getX() << " ; " << a.getY() << ")\n" << std::endl;
@@ -50,13 +50,13 @@ int main(void)
 	std::cout << "Enter x.b" << std::endl;
 	std::getline(std::cin, str);
 	if (std::cin.eof())
-		return false;
+		return 0;
 	b_x = atoi(str.c_str());
 	//y
 	std::cout << "Enter y.b" << std::endl;
 	std::getline(std::cin, str);
 	if (std::cin.eof())
-		return false;
+		return 0;
 	b_y = atoi(str.c_str());
 	Point b(b_x, b_y);
 	std::cout << "Point B is setup\nB(" << b.getX() << " ; " << b.getY() << ")\n" << std::endl;
@@ -67,13 +67,13 @@ int main(void)
 	std::cout << "Enter x.c" << std::endl;
 	std::getline(std::cin, str);
 	if (std::cin.eof())
-		return false;
+		return 0;
 	c_x = atoi(str.c_str());
 	//y
 	std::cout << "Enter y.c" << std::endl;
 	std::getline(std::cin, str);
 	if (std::cin.eof())
-		return false;
+		return 0;
 	c_y = atoi(str.c_str());
 	Point c(c_x, c_y);
 	std::cout << "Point C is setup\nC(" << c.getX() << " ; " << c.getY() << ")\n" << std::endl;
@@ -84,12 +84,12 @@ int main(void)
 	std::cout << "Enter x.m" << std::endl;
 	std::getline(std::cin, str);
 	if (std::cin.eof())
-		return false;
+		return 0;
 	m_x = atoi(str.c_str());
 	std::cout << "Enter y.m" << std::endl;
 	std::getline(std::cin, str);
 	if (std::cin.eof())
-		return false;
+		return 0;
 	m_y = atoi(str.c_str());
 	Point m(m_x, m_y);
 	std::cout << "Point M is setup\nC(" << m.getX() << " ; " << m.getY() << ")\n\n" << std::endl;

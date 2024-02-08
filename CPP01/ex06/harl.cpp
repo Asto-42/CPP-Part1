@@ -6,7 +6,7 @@
 /*   By: jquil <jquil@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/23 18:41:30 by jquil             #+#    #+#             */
-/*   Updated: 2024/01/24 08:51:39 by jquil            ###   ########.fr       */
+/*   Updated: 2024/02/07 14:22:27 by jquil            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,13 @@ void Harl::complain(std::string level)
 	{
 		if(level == arry[x] || val == 1)
 		{
-			(this->*ptr[x])();
+			while (x < 4)
+			{
+				std::cout << "[  " << arry[x] << "  ]" << std::endl;
+				(this->*ptr[x])();
+				std::cout << std::endl;
+				x++;
+			}
 			val = 1;
 			break;
 		}

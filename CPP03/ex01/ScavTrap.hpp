@@ -6,13 +6,13 @@
 /*   By: jquil <jquil@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 16:13:21 by jquil             #+#    #+#             */
-/*   Updated: 2024/01/30 17:15:36 by jquil            ###   ########.fr       */
+/*   Updated: 2024/02/07 14:34:21 by jquil            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
-#ifndef SCAVTRAP_H
-# define SCAVTRAP_H
+#ifndef SCAVTRAP_HPP
+# define SCAVTRAP_HPP
 
 #include "ClapTrap.hpp"
 

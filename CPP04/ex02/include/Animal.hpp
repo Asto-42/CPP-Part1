@@ -6,12 +6,12 @@
 /*   By: jquil <jquil@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 17:34:22 by jquil             #+#    #+#             */
-/*   Updated: 2024/01/31 14:50:25 by jquil            ###   ########.fr       */
+/*   Updated: 2024/02/07 14:45:58 by jquil            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMAL_H
-# define ANIMAL_H
+#ifndef ANIMAL_HPP
+# define ANIMAL_HPP
 
 #include <string>
 #include <iostream>

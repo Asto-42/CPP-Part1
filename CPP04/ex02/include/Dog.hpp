@@ -6,12 +6,12 @@
 /*   By: jquil <jquil@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 17:34:56 by jquil             #+#    #+#             */
-/*   Updated: 2024/01/31 14:27:16 by jquil            ###   ########.fr       */
+/*   Updated: 2024/02/07 14:46:10 by jquil            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DOG_H
-# define DOG_H
+#ifndef DOG_HPP
+# define DOG_HPP
 
 class Dog: public Animal
 {
