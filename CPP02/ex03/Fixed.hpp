@@ -6,12 +6,12 @@
 /*   By: jquil <jquil@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 08:55:40 by jquil             #+#    #+#             */
-/*   Updated: 2024/02/07 14:30:30 by jquil            ###   ########.fr       */
+/*   Updated: 2024/02/13 14:53:08 by jquil            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FIXED_H
-# define FIXED_H
+#ifndef FIXED_HPP
+# define FIXED_HPP
 
 #include <string>
 #include <iostream>
@@ -41,6 +41,7 @@ class Fixed
 
 	Fixed & operator=( Fixed const & rhs);
 	Fixed & operator+(Fixed const & rhs);
+	Fixed & operator-(Fixed const & rhs);
 	float operator-(Fixed rhs)const;
 	float operator*(Fixed fixed) const;
 	float operator/(Fixed rhs) const;
@@ -59,7 +60,8 @@ class Fixed
 
 	static Fixed & max(Fixed &first, Fixed &second);
 	static const Fixed & max(const Fixed &first, const Fixed &second);
-	Fixed & min(Fixed &first, Fixed &second);
+	static Fixed & min(Fixed &first, Fixed &second);
+	static const Fixed & min(const Fixed &first, const Fixed &second);
 
 
 	int getRawBits(void)const;

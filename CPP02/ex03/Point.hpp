@@ -6,12 +6,12 @@
 /*   By: jquil <jquil@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 13:27:40 by jquil             #+#    #+#             */
-/*   Updated: 2024/02/07 14:30:30 by jquil            ###   ########.fr       */
+/*   Updated: 2024/02/13 12:53:56 by jquil            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef POINT_H
-# define POINT_H
+#ifndef POINT_HPP
+# define POINT_HPP
 
 #include "Fixed.hpp"
 

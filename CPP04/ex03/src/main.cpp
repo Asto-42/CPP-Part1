@@ -6,7 +6,7 @@
 /*   By: jquil <jquil@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 17:34:01 by jquil             #+#    #+#             */
-/*   Updated: 2024/02/07 15:54:08 by jquil            ###   ########.fr       */
+/*   Updated: 2024/02/08 17:10:51 by jquil            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,8 +43,9 @@ int main(void)
 	//std::cout << "//	Create characters part" << std::endl;
 	ICharacter* Jimmy = new Character("Jimmy");
 	ICharacter* bob = new Character("bob");
+	//ICharacter* Gandalf = new Character("gandalf");
+	//*Gandalf = *Jimmy;
 	//std::cout << "//	Finish create characters part\n\n" << std::endl;
-
 	Jimmy->equip(Jimmy_ice_staff);
 	Jimmy->equip(Jimmy_ice_staff_2);
 	Jimmy->equip(Jimmy_cure_staff);

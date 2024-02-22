@@ -6,7 +6,7 @@
 /*   By: jquil <jquil@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 15:24:41 by jquil             #+#    #+#             */
-/*   Updated: 2024/01/30 17:11:27 by jquil            ###   ########.fr       */
+/*   Updated: 2024/02/20 15:14:52 by jquil            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,11 @@ ClapTrap::ClapTrap(void)
 	this->Attack_damage = 5;
 };
 
+ClapTrap::ClapTrap(const ClapTrap & y)
+{
+	//std::cout << "Copy constructor called" << std::endl;
+	*this = y;
+};
 ClapTrap::ClapTrap(std::string str)
 {
 	std::cout << "\033[34mCustom Name constructor called\033[0m" << std::endl;

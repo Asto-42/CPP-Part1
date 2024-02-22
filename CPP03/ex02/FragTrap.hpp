@@ -6,7 +6,7 @@
 /*   By: jquil <jquil@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 17:14:16 by jquil             #+#    #+#             */
-/*   Updated: 2024/02/07 14:38:07 by jquil            ###   ########.fr       */
+/*   Updated: 2024/02/20 15:17:55 by jquil            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ class FragTrap:public ClapTrap
 
 	FragTrap();
 	FragTrap(std::string Name);
+	FragTrap(const FragTrap & y);
 	~FragTrap();
 
 	void highFivesGuys(void);

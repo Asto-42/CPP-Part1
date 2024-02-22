@@ -6,7 +6,7 @@
 /*   By: jquil <jquil@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/23 18:36:30 by jquil             #+#    #+#             */
-/*   Updated: 2024/02/07 14:29:08 by jquil            ###   ########.fr       */
+/*   Updated: 2024/02/13 14:56:20 by jquil            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,14 +29,12 @@ int main(void)
 	bool res;
 
 	//A point assign
-	//x
 	std::cout << "First, you need to setup points\nTriangle ABC - M is the point we test\nA(x.a ; y.a)\nB(x.b ; y.b)\nC(x.c ; y.c)\nM(x.m ; y.m)" << std::endl;
 	std::cout << "Enter x.a" << std::endl;
 	std::getline(std::cin, str);
 	if (std::cin.eof())
 		return 0;
 	a_x = atoi(str.c_str());
-	//y
 	std::cout << "Enter y.a" << std::endl;
 	std::getline(std::cin, str);
 	if (std::cin.eof())
@@ -46,13 +44,11 @@ int main(void)
 	std::cout << "Point A is setup\nA(" << a.getX() << " ; " << a.getY() << ")\n" << std::endl;
 
 	//B point assign
-	//x
 	std::cout << "Enter x.b" << std::endl;
 	std::getline(std::cin, str);
 	if (std::cin.eof())
 		return 0;
 	b_x = atoi(str.c_str());
-	//y
 	std::cout << "Enter y.b" << std::endl;
 	std::getline(std::cin, str);
 	if (std::cin.eof())
@@ -63,13 +59,11 @@ int main(void)
 
 
 	//C point assign
-	//x
 	std::cout << "Enter x.c" << std::endl;
 	std::getline(std::cin, str);
 	if (std::cin.eof())
 		return 0;
 	c_x = atoi(str.c_str());
-	//y
 	std::cout << "Enter y.c" << std::endl;
 	std::getline(std::cin, str);
 	if (std::cin.eof())
@@ -80,7 +74,6 @@ int main(void)
 
 
 	//M point assign
-	//x
 	std::cout << "Enter x.m" << std::endl;
 	std::getline(std::cin, str);
 	if (std::cin.eof())

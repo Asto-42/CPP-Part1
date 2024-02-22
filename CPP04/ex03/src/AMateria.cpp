@@ -6,7 +6,7 @@
 /*   By: jquil <jquil@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 17:34:09 by jquil             #+#    #+#             */
-/*   Updated: 2024/02/07 12:09:45 by jquil            ###   ########.fr       */
+/*   Updated: 2024/02/14 18:05:37 by jquil            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,7 +90,6 @@ Cure* Cure::clone() const
 
 void Cure::use(ICharacter & target)
 {
-
 	std::cout << "* heals "<< target.getName() <<"’s wounds *" << std::endl;
 }
 

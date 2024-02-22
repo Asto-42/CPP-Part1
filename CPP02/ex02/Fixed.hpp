@@ -6,7 +6,7 @@
 /*   By: jquil <jquil@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 08:55:40 by jquil             #+#    #+#             */
-/*   Updated: 2024/02/07 14:25:51 by jquil            ###   ########.fr       */
+/*   Updated: 2024/02/13 14:42:01 by jquil            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,8 @@ class Fixed
 
 	static Fixed & max(Fixed &first, Fixed &second);
 	static const Fixed & max(const Fixed &first, const Fixed &second);
-	Fixed & min(Fixed &first, Fixed &second);
+	static Fixed & min(Fixed &first, Fixed &second);
+	static const Fixed & min(const Fixed &first, const Fixed &second);
 
 
 	int getRawBits(void)const;

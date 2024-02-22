@@ -6,7 +6,7 @@
 /*   By: jquil <jquil@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 15:24:14 by jquil             #+#    #+#             */
-/*   Updated: 2024/02/07 14:38:02 by jquil            ###   ########.fr       */
+/*   Updated: 2024/02/20 15:18:33 by jquil            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ class ClapTrap
 	ClapTrap();
 	ClapTrap(std::string str);
 	ClapTrap(std::string str, int dps);
+	ClapTrap(const ClapTrap & y);
 	~ClapTrap();
 
 	void attack(const std::string & target);

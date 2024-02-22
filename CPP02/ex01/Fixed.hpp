@@ -6,7 +6,7 @@
 /*   By: jquil <jquil@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 08:55:40 by jquil             #+#    #+#             */
-/*   Updated: 2024/02/07 14:25:12 by jquil            ###   ########.fr       */
+/*   Updated: 2024/02/13 13:25:08 by jquil            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ class Fixed
 	Fixed(const Fixed & y);
 	Fixed(const int);
 	Fixed(const float);
+	Fixed & operator=( Fixed const & rhs);
 
 
 	int getRawBits(void)const;

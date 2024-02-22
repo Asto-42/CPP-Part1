@@ -6,7 +6,7 @@
 /*   By: jquil <jquil@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 17:14:32 by jquil             #+#    #+#             */
-/*   Updated: 2024/01/30 17:27:07 by jquil            ###   ########.fr       */
+/*   Updated: 2024/02/20 15:18:13 by jquil            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,12 @@ FragTrap::FragTrap(std::string Name): ClapTrap(Name)
 	this->hit_points = 100;
 	this->Energy_points = 100;
 	this->Attack_damage = 30;
+};
+
+FragTrap::FragTrap(const FragTrap & y)
+{
+	//std::cout << "Copy constructor called" << std::endl;
+	*this = y;
 };
 
 void FragTrap::highFivesGuys(void)

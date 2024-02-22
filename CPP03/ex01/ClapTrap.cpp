@@ -6,7 +6,7 @@
 /*   By: jquil <jquil@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 15:24:41 by jquil             #+#    #+#             */
-/*   Updated: 2024/02/07 14:36:55 by jquil            ###   ########.fr       */
+/*   Updated: 2024/02/20 15:15:18 by jquil            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,12 @@ ClapTrap::ClapTrap(std::string str, int dps)
 	this->hit_points = 10;
 	this->Energy_points = 10;
 	this->Attack_damage = dps;
+};
+
+ClapTrap::ClapTrap(const ClapTrap & y)
+{
+	//std::cout << "Copy constructor called" << std::endl;
+	*this = y;
 };
 
 void ClapTrap::attack(const std::string & target)

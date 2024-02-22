@@ -6,7 +6,7 @@
 /*   By: jquil <jquil@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 08:58:49 by jquil             #+#    #+#             */
-/*   Updated: 2024/01/30 13:24:46 by jquil            ###   ########.fr       */
+/*   Updated: 2024/02/13 14:42:18 by jquil            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ Fixed::Fixed(const int i)
 Fixed::Fixed(const float f)
 {
 	//std::cout << "Float constructor called" << std::endl;
-	this->setRawBits((int)roundf(f * (1 << this->y)));
+	this->x = roundf(f * 256);
 };
 
 Fixed & Fixed::operator=( Fixed const & rhs)
@@ -71,14 +71,14 @@ float Fixed::operator/(Fixed rhs) const
 bool Fixed::operator>(Fixed const & rhs)
 {
 	//std::cout << " > operator called" << std::endl;
-	if (this->getRawBits() > rhs.getRawBits())
+	if (this->toFloat() > rhs.toFloat())
 		return (1);
 	return (0);
 }
 
 bool Fixed::operator<(Fixed const & rhs)
 {
-	std::cout << " < operator called" << std::endl;
+	//std::cout << " < operator called" << std::endl;
 	if (this->getRawBits() < rhs.getRawBits())
 		return (1);
 	return (0);
@@ -165,6 +165,14 @@ const Fixed & Fixed::max(const Fixed &first, const Fixed &second)
 }
 
 Fixed & Fixed::min(Fixed &first, Fixed &second)
+{
+	if (first.toFloat() >= second.toFloat())
+		return (second);
+	else
+		return (first);
+}
+
+const Fixed & Fixed::min(const Fixed &first, const Fixed &second)
 {
 	if (first.toFloat() >= second.toFloat())
 		return (second);

@@ -6,7 +6,7 @@
 /*   By: jquil <jquil@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/23 18:36:30 by jquil             #+#    #+#             */
-/*   Updated: 2024/01/24 16:56:15 by jquil            ###   ########.fr       */
+/*   Updated: 2024/02/13 13:26:46 by jquil            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,7 @@ int main(void)
 	std::cout << "b is " << b.toInt() << " as integer" << std::endl;
 	std::cout << "c is " << c.toInt() << " as integer" << std::endl;
 	std::cout << "d is " << d.toInt() << " as integer" << std::endl;
+	Fixed f = a ;
+	std::cout << "f is " << f.toFloat() << "	a is " << a.toFloat() << std::endl;
 	return 0;
 }

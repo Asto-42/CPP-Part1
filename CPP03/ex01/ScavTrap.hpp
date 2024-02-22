@@ -6,7 +6,7 @@
 /*   By: jquil <jquil@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 16:13:21 by jquil             #+#    #+#             */
-/*   Updated: 2024/02/07 14:34:21 by jquil            ###   ########.fr       */
+/*   Updated: 2024/02/20 15:16:02 by jquil            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ class ScavTrap:public ClapTrap
 
 	ScavTrap();
 	ScavTrap(std::string Name);
+	ScavTrap(const ScavTrap & y);
 	~ScavTrap();
 
 	void attack(const std::string & target);

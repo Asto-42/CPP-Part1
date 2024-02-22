@@ -6,7 +6,7 @@
 /*   By: jquil <jquil@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 16:13:11 by jquil             #+#    #+#             */
-/*   Updated: 2024/01/30 17:20:23 by jquil            ###   ########.fr       */
+/*   Updated: 2024/02/20 15:17:36 by jquil            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,12 @@ ScavTrap::ScavTrap(std::string Name): ClapTrap(Name)
 	this->Energy_points = 50;
 	this->Attack_damage = 20;
 	this->guard_mode = 0;
+};
+
+ScavTrap::ScavTrap(const ScavTrap & y)
+{
+	//std::cout << "Copy constructor called" << std::endl;
+	*this = y;
 };
 
 void ScavTrap::attack(const std::string & target)
