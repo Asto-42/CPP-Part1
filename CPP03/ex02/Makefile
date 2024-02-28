@@ -6,7 +6,7 @@
 #    By: jquil <jquil@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/30 16:12:36 by jquil             #+#    #+#              #
-#    Updated: 2024/02/07 14:32:48 by jquil            ###   ########.fr        #
+#    Updated: 2024/02/28 11:56:30 by jquil            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ SRC		=	main.cpp		\
 NAME		=	FragTrap
 OBJS		=	$(SRC:.cpp=.o)
 
-COMPILE		=	clang++
+COMPILE		=	c++
 
 FLAGS		=	-Wall -Wextra -Werror -std=c++98
 

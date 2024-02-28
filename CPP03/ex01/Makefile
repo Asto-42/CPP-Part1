@@ -6,7 +6,7 @@
 #    By: jquil <jquil@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/30 16:12:36 by jquil             #+#    #+#              #
-#    Updated: 2024/02/07 14:32:41 by jquil            ###   ########.fr        #
+#    Updated: 2024/02/28 11:56:25 by jquil            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ SRC		=	main.cpp		\
 NAME		=	ScavTrap
 OBJS		=	$(SRC:.cpp=.o)
 
-COMPILE		=	clang++
+COMPILE		=	c++
 
 FLAGS		=	-Wall -Wextra -Werror -std=c++98
 

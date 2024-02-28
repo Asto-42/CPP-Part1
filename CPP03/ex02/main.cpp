@@ -6,7 +6,7 @@
 /*   By: jquil <jquil@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/23 18:36:30 by jquil             #+#    #+#             */
-/*   Updated: 2024/02/07 14:39:08 by jquil            ###   ########.fr       */
+/*   Updated: 2024/02/28 11:47:47 by jquil            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,8 @@ int main(void)
 		e.takeDamage(1);
 		e.attack("some random dude");
 		f.highFivesGuys();
-		// for(int i = 0; i < 101; i++)
-		// 	f.attack("FragTrap-clone");
+		for(int i = 0; i < 101; i++)
+			f.attack("FragTrap-clone");
 		std::cout << "\033[34mDeconstructing\033[0m" << std::endl;
 	}
 	return (0);

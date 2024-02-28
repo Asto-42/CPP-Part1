@@ -6,7 +6,7 @@
 #    By: jquil <jquil@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/30 16:12:36 by jquil             #+#    #+#              #
-#    Updated: 2024/02/07 14:40:06 by jquil            ###   ########.fr        #
+#    Updated: 2024/02/28 11:54:48 by jquil            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ SRC		=	src/main.cpp		\
 NAME		=	Brain
 OBJS		=	$(SRC:.cpp=.o)
 
-COMPILE		=	clang++
+COMPILE		=	c++
 
 FLAGS		=	-g3 -Wall -Wextra -Werror -std=c++98
 

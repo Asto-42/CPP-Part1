@@ -6,7 +6,7 @@
 #    By: jquil <jquil@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/30 16:12:36 by jquil             #+#    #+#              #
-#    Updated: 2024/02/07 11:48:21 by jquil            ###   ########.fr        #
+#    Updated: 2024/02/28 11:55:24 by jquil            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ SRC		=	src/main.cpp		\
 NAME		=	1v1
 OBJS		=	$(SRC:.cpp=.o)
 
-COMPILE		=	clang++
+COMPILE		=	c++
 
 FLAGS		=	-g3 -Wall -Wextra -Werror -std=c++98
 

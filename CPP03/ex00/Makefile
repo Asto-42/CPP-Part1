@@ -6,7 +6,7 @@
 #    By: jquil <jquil@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/10 11:58:31 by jquil             #+#    #+#              #
-#    Updated: 2024/02/07 14:32:35 by jquil            ###   ########.fr        #
+#    Updated: 2024/02/28 11:56:19 by jquil            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ SRC		=	main.cpp		\
 NAME		=	ClapTrap
 OBJS		=	$(SRC:.cpp=.o)
 
-COMPILE		=	clang++
+COMPILE		=	c++
 
 FLAGS		=	-Wall -Wextra -Werror -std=c++98
 
