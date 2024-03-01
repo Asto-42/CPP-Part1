@@ -6,7 +6,7 @@
 /*   By: jquil <jquil@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 17:34:01 by jquil             #+#    #+#             */
-/*   Updated: 2024/02/08 17:10:51 by jquil            ###   ########.fr       */
+/*   Updated: 2024/02/29 13:20:40 by jquil            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,7 @@ int main(void)
 	Jimmy->use(1, *bob);
 	Jimmy->use(2, *bob);
 
+	bob->unequip(1);
 	delete bob;
 	delete Jimmy;
 	delete src1;

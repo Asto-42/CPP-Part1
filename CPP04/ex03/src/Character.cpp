@@ -6,7 +6,7 @@
 /*   By: jquil <jquil@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/31 16:32:04 by jquil             #+#    #+#             */
-/*   Updated: 2024/02/07 15:48:17 by jquil            ###   ########.fr       */
+/*   Updated: 2024/02/29 13:17:37 by jquil            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,11 @@ const std::string &Character::getName() const
 
 void Character::equip(AMateria* m)
 {
+	if (!m)
+	{
+		std::cout << "Can't equip the materia because he doesnt exist" << std::endl;
+		return ;
+	}
 	for (int x = 0; x < 4; x++)
 	{
 		if (this->inventory[x] == 0)

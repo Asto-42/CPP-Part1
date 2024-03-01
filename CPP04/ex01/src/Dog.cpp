@@ -6,7 +6,7 @@
 /*   By: jquil <jquil@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 17:34:59 by jquil             #+#    #+#             */
-/*   Updated: 2024/01/31 14:36:15 by jquil            ###   ########.fr       */
+/*   Updated: 2024/02/29 13:01:51 by jquil            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,12 +22,18 @@ Dog::Dog()
 Dog::Dog(Dog & ref):Animal(ref)
 {
 	this->type = ref.getType();
+	this->brain = new Brain(*ref.brain);
 	std::cout << "\033[34mCopy Dog constructor called\033[0m" << std::endl;
 };
 
 Dog & Dog::operator=(Dog const & rhs)
 {
-	this->type = rhs.type;
+	if (this != &rhs)
+	{
+		this->type = rhs.type;
+		delete(this->brain);
+		this->brain = new Brain(*rhs.brain);
+	}
 	return (*this);
 }
 

@@ -1,37 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   Cure.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jquil <jquil@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/30 17:34:56 by jquil             #+#    #+#             */
-/*   Updated: 2024/02/29 12:58:04 by jquil            ###   ########.fr       */
+/*   Created: 2024/03/01 14:11:49 by jquil             #+#    #+#             */
+/*   Updated: 2024/03/01 14:14:26 by jquil            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DOG_HPP
-# define DOG_HPP
+#ifndef CURE_HPP
+# define CURE_HPP
 
-class Dog: public Animal
+class Cure:public AMateria
 {
-	private:
-
+	private :
 	std::string type;
-	Brain* brain;
 
-	public:
+	public :
 
-	Dog();
-	Dog(Dog & ref);
-	~Dog();
-
-	Dog & operator=(Dog const & rhs);
-
-	void makeSound() const;
-	std::string getType( void ) const;
-
+	Cure();
+	~Cure();
+	//std::string const & getType();
+	virtual Cure* clone() const;
+	virtual void use(ICharacter & target);
 };
-
 
 #endif

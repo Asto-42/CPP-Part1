@@ -1,37 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   Ice.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jquil <jquil@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/30 17:34:56 by jquil             #+#    #+#             */
-/*   Updated: 2024/02/29 12:58:04 by jquil            ###   ########.fr       */
+/*   Created: 2024/03/01 14:11:24 by jquil             #+#    #+#             */
+/*   Updated: 2024/03/01 14:14:41 by jquil            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DOG_HPP
-# define DOG_HPP
+#ifndef ICE_HPP
+# define ICE_HPP
 
-class Dog: public Animal
+class Ice:public AMateria
 {
-	private:
+	private :
 
-	std::string type;
-	Brain* brain;
+	public :
 
-	public:
-
-	Dog();
-	Dog(Dog & ref);
-	~Dog();
-
-	Dog & operator=(Dog const & rhs);
-
-	void makeSound() const;
-	std::string getType( void ) const;
-
+	Ice();
+	~Ice();
+	virtual Ice* clone() const;
+	virtual void use(ICharacter & target);
 };
-
 
 #endif

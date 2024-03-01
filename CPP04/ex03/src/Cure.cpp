@@ -1,37 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   Cure.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jquil <jquil@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/30 17:34:56 by jquil             #+#    #+#             */
-/*   Updated: 2024/02/29 12:58:04 by jquil            ###   ########.fr       */
+/*   Created: 2024/03/01 14:07:50 by jquil             #+#    #+#             */
+/*   Updated: 2024/03/01 14:13:26 by jquil            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DOG_HPP
-# define DOG_HPP
+#include "../include/AMateria.hpp"
 
-class Dog: public Animal
+Cure::Cure():AMateria("cure")
 {
-	private:
-
-	std::string type;
-	Brain* brain;
-
-	public:
-
-	Dog();
-	Dog(Dog & ref);
-	~Dog();
-
-	Dog & operator=(Dog const & rhs);
-
-	void makeSound() const;
-	std::string getType( void ) const;
-
+	std::cout << "\033[34mDefault Cure constructor called\033[0m" << std::endl;
 };
 
+Cure::~Cure()
+{
+	std::cout << "\033[34mDefault Cure destructor called\033[0m" << std::endl;
+}
 
-#endif
+Cure* Cure::clone() const
+{
+	std::cout << "Copy of Cure create and return" << std::endl;
+	Cure *copyMateria = new Cure;
+	return (copyMateria);
+}

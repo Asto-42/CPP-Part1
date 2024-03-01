@@ -6,7 +6,7 @@
 /*   By: jquil <jquil@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 17:35:06 by jquil             #+#    #+#             */
-/*   Updated: 2024/01/31 14:36:20 by jquil            ###   ########.fr       */
+/*   Updated: 2024/02/29 13:11:45 by jquil            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,12 +27,18 @@ void Cat::makeSound() const
 Cat::Cat(Cat & ref):Animal(ref)
 {
 	this->type = ref.getType();
+	this->brain = new Brain(*ref.brain);
 	std::cout << "\033[34mCopy Cat constructor called\033[0m" << std::endl;
 }
 
 Cat & Cat::operator=(Cat const & rhs)
 {
-	this->type = rhs.type;
+	if (this != &rhs)
+	{
+		this->type = rhs.type;
+		delete(this->brain);
+		this->brain = new Brain(*rhs.brain);
+	}
 	return (*this);
 }
 

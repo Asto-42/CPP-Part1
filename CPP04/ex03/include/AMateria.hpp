@@ -6,7 +6,7 @@
 /*   By: jquil <jquil@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 17:34:22 by jquil             #+#    #+#             */
-/*   Updated: 2024/02/07 11:53:25 by jquil            ###   ########.fr       */
+/*   Updated: 2024/03/01 14:15:31 by jquil            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,35 +26,8 @@
 #include <math.h>
 
 #include "Character.hpp"
-
-class ICharacter;
-class AMateria;
-
-class IMateriaSource
-{
-	public:
-	virtual ~IMateriaSource() {}
-	virtual void learnMateria(AMateria*) = 0;
-	virtual AMateria* createMateria(std::string const & type) = 0;
-};
-
-class MateriaSource:public IMateriaSource
-{
-	private :
-
-
-	public:
-
-	AMateria *inventory[4];
-	MateriaSource();
-	MateriaSource(MateriaSource const & ref);
-	MateriaSource & operator=(MateriaSource const & ref);
-
-
-	virtual ~MateriaSource();
-	virtual void learnMateria(AMateria* src);
-	virtual AMateria* createMateria(std::string const & type);
-};
+#include "IMateriaSource.hpp"
+#include "MateriaSource.hpp"
 
 class AMateria
 {
@@ -72,31 +45,7 @@ class AMateria
 	virtual void use(ICharacter & target);
 };
 
-class Ice:public AMateria
-{
-	private :
-
-	public :
-
-	Ice();
-	~Ice();
-	virtual Ice* clone() const;
-	virtual void use(ICharacter & target);
-};
-
-class Cure:public AMateria
-{
-	private :
-	std::string type;
-
-	public :
-
-	Cure();
-	~Cure();
-	//std::string const & getType();
-	virtual Cure* clone() const;
-	virtual void use(ICharacter & target);
-};
-
+#include "Cure.hpp"
+#include "Ice.hpp"
 
 #endif
