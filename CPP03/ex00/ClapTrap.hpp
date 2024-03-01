@@ -6,12 +6,12 @@
 /*   By: jquil <jquil@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 15:24:14 by jquil             #+#    #+#             */
-/*   Updated: 2024/02/20 15:14:32 by jquil            ###   ########.fr       */
+/*   Updated: 2024/02/29 17:33:46 by jquil            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CLAPTRAP_HPP
-# define CLAPTRAP_HPP
+#ifndef CLAPTRAP_HP
+# define CLAPTRAP_HP
 
 #include <string>
 #include <iostream>

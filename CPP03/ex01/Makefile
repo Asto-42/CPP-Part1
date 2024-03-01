@@ -6,7 +6,7 @@
 #    By: jquil <jquil@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/30 16:12:36 by jquil             #+#    #+#              #
-#    Updated: 2024/02/28 11:56:25 by jquil            ###   ########.fr        #
+#    Updated: 2024/02/29 17:34:21 by jquil            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,9 @@ OBJS		=	$(SRC:.cpp=.o)
 
 COMPILE		=	c++
 
-FLAGS		=	-Wall -Wextra -Werror -std=c++98
+FLAGS		=	-Wall -Wextra -Werror -std=c++98 -MMD
+
+DEPS = $(OBJS:.o=.d)
 
 EXE_NAME	=	-o $(NAME)
 
@@ -46,3 +48,5 @@ re:	fclean all
 	${COMPILE} ${FLAGS} -c $< -o ${<:.cpp=.o}
 
 .PHONY:	all clean fclean re run
+
+-include $(DEPS)
